@@ -1,13 +1,9 @@
 package com.organizationTestScripts;
 
-import java.util.Random;
-import java.util.concurrent.TimeUnit;
+
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import com.Eukelade.genericrepository.BaseClass;
@@ -25,7 +21,7 @@ public class CreateContact extends BaseClass{
 		driver.findElement(By.xpath("//a[text()='Contacts']")).click();
 		driver.findElement(By.xpath("//a/img[contains(@title,'Create Contact')]")).click();
 		WebElement mrrmrs = driver.findElement(By.name("salutationtype"));
-		selectItemFromList(mrrmrs, "Mr.");
+		wdu.selectbyvaluedd(mrrmrs,"Mr." );
 		driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys(conname);
 		driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys("Mask");
 		driver.findElement(By.id("phone")).sendKeys("1234567890");
@@ -36,11 +32,6 @@ public class CreateContact extends BaseClass{
 	
 		
 	}
-	public static void selectItemFromList(WebElement list,String item)
-	{
-		Select s=new Select(list);
-		s.selectByValue(item);
-		
-	}
+	
 
 }

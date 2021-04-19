@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.organizationTestScripts.CreateOrganization">
+      <class name="com.organiassignment.TestScripts.CreateOrganAssignToMarketingGroup">
         <methods>
+          <include name="createOrg"/>
           <include name="configBeforeMethod"/>
           <include name="configBeforeClass"/>
-          <include name="createOrg"/>
           <include name="configAfterMethod"/>
           <include name="configAfterClass"/>
         </methods>
-      </class> <!-- com.organizationTestScripts.CreateOrganization -->
+      </class> <!-- com.organiassignment.TestScripts.CreateOrganAssignToMarketingGroup -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

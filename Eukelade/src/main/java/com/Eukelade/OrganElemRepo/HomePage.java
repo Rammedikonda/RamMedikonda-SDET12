@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class HomePage {
+	
 	@FindBy(linkText="Products")
 	private WebElement productlink;
 	
@@ -13,7 +14,8 @@ public class HomePage {
 	@FindBy(linkText="Sign Out")
 	private WebElement Signoutlink;
 	
-	
+	@FindBy(xpath="(//a[text()='Organizations'])[1]")
+	private WebElement organizationsClick;
 	
 	public WebElement getProductLink()
 	{
@@ -27,4 +29,10 @@ public class HomePage {
 	{
 		return Signoutlink;
 	}
+	
+	public WebElement getOrganizationsClick() 
+	{
+		return organizationsClick;
+	}
+	
 }

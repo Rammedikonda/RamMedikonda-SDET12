@@ -1,6 +1,7 @@
 package com.Eukelade.genericrepository;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -49,6 +50,17 @@ public class WebDriverUtility {
 	{
 		Select select = new Select(element);
 		select.selectByVisibleText(visibletext);
+	}
+	/**
+	 * @author Ram
+	 * getting options from rating dropdown
+	 * @param list
+	 * @return
+	 */
+	public List<WebElement> getSelectRatingList(WebElement list)
+	{
+		Select s=new Select(list);
+		return s.getOptions();
 	}
 	/**@author Ram
 	 * Select element from dropdown by index 
@@ -201,6 +213,15 @@ public class WebDriverUtility {
 			Thread.sleep(500);
 			count++;
 		}
+	}
+	/**
+	 * @author RAM
+	 * ELEMENT IS DISPLAYED
+	 * @param element
+	 */
+	public void elementIsDisplayed(WebElement element)
+	{
+		element.isDisplayed();
 	}
 /**
  * @author Ram
